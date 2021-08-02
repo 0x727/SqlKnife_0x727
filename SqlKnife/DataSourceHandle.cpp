@@ -71,6 +71,7 @@ bool DataSourceHandle:: basequery(string sql)
 				{
 					var = m_pRecordset->GetCollect((long)1);
 					//加防火墙规则
+					//高度耦合
 					ostringstream oss;
 					val = _bstr_t(var);
 					result = (char*)val;

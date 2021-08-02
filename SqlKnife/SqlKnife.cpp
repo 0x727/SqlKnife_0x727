@@ -6,12 +6,19 @@
 
 //using namespace std;
 
+void printusage(char * filename) {
+
+	cout << "SqlKnife v1.0 " << endl << "A mssql exploit tool in commandline." << endl;
+	cout << filename << " <-H host> <-P port> <-u username> <-p password> <-D dbname> <-c cmd> <--openrdp> <--shift> <--disfw> <--oacreate> <--clrcmd> <--clrdexec> <--xpcmd> <--dbup> <--fix> <--remove> <--3/--4>" << endl;
+
+
+}
+
 int main(int argc, char** argv) {
 
 	if (argc == 1)
 	{
-		cout << "SqlKnife v1.0 "<<endl << "a mssql exploit tool in commandline." << endl;
-		cout << argv[0] << "<-H host> <-P port> <-u username> <-p password> <-D dbname> <-c cmd> <--openrdp> <--shift> <--disfw> <--oacreate> <--clrcmd> <--clrdexec> <--xpcmd> <--dbup> <--fix> <--remove>" << endl;
+		printusage(argv[0]);
 		return 0;
 	}
 
@@ -22,20 +29,15 @@ int main(int argc, char** argv) {
 	string pass = "";
 	string port = "1433";
 	string dbname = "master";
-	//string asmarg = "";
 	bool iffix = false;
 	bool shift = false;
 	bool openrdp = false;
 	bool disfw = false;
 	bool remove = false;
+	bool isdonet4 = true;
 
 	static struct option long_option[] = {
 
-		//{"host",required_argument,NULL,'H'},
-		//{"user",required_argument,NULL,'u'},
-		//{"pass",required_argument,NULL,'p'},
-		//{"port",required_argument,NULL,'P'},
-		//{"db",required_argument,NULL,'D'},
 		{"openrdp",no_argument,NULL,0},
 		{"shift",no_argument,NULL,1},
 		{"disfw",no_argument,NULL,2},
@@ -45,11 +47,9 @@ int main(int argc, char** argv) {
 		{"clrdexec",no_argument,NULL,6},
 		{"fix",no_argument,NULL,7},
 		{"dbup",no_argument,NULL,8},
-		//{"exeasm",no_argument,NULL,9},
 		{"remove",no_argument,NULL,10},
-		//{"cmd",required_argument,NULL,'c'},
-		//{"puser",required_argument,NULL,'s'},
-		//{"ppass",required_argument,NULL,'a'},
+		{"3",no_argument,NULL,11},
+		{"4",no_argument,NULL,12},
 		{0,0,0,0}
 
 	};
@@ -92,11 +92,14 @@ int main(int argc, char** argv) {
 		case 8:
 			method = ExecMethod::DBUP;
 			continue;
-			//case 9:
-			//	method = ExecMethod::EXEASM;
-			//	continue;
 		case 10:
 			remove = true;
+			continue;
+		case 11:
+			isdonet4 = false;
+			continue;
+		case 12:
+			isdonet4 = true;
 			continue;
 		case 'H':
 			host = optarg;
@@ -116,13 +119,6 @@ int main(int argc, char** argv) {
 		case 'D':
 			dbname = optarg;
 			continue;
-			//case 's':
-
-			//	continue;
-			//case 'a':
-				//exeasm时的参数
-				//asmarg = optarg;
-				//continue;
 		default:
 			break;
 		}
@@ -159,7 +155,7 @@ int main(int argc, char** argv) {
 
 	if (method != ExecMethod::NONE)
 	{
-		msexp->execcmd(cmd, method);
+		msexp->execcmd(cmd, method,isdonet4);
 		return 0;
 	}
 
