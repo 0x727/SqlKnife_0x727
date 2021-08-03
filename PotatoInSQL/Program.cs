@@ -53,8 +53,8 @@ namespace SweetPotato {
 
             string clsId = "4991D34B-80A1-4291-83B6-3328366B9097";
             ushort port = 6666;
-            //string program = @"c:\Windows\System32\cmd.exe";
-            string program = @"sqlps.exe";
+            string program = @"c:\Windows\System32\cmd.exe";
+            //string program = @"sqlps.exe";
             string programArgs = null;
             ExecutionMethod executionMethod = ExecutionMethod.Auto;
             bool showHelp = false;
