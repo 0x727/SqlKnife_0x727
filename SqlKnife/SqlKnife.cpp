@@ -8,6 +8,13 @@
 
 void printusage(char * filename) {
 
+	cout << R"(
+    __             ____    ___     ____  
+   /  \   __ __   |__  |  |_  )   |__  | 
+  | () |  \ \ /     / /    / /      / /  
+   \__/   /_\_\    /_/    /___|    /_/		author:hl0rey
+
+		)" << endl;
 	cout << "SqlKnife v1.0 " << endl << "A mssql exploit tool in commandline." << endl;
 	cout << filename << " <-H host> <-P port> <-u username> <-p password> <-D dbname> <-c cmd> <--openrdp> <--shift> <--disfw> <--oacreate> <--clrcmd> <--clrdexec> <--xpcmd> <--dbup> <--fix> <--remove> <--3/--4>" << endl;
 
