@@ -61,7 +61,7 @@ SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123  --oacreate -c calc.ex
 
 ![Snipaste_2021-08-03_10-56-34](img/Snipaste_2021-08-03_10-56-34.png)
 
-### 开RDP，关防火墙加规则（开RDP时自动加），装shift后门
+### 开RDP，关防火墙加规则（开RDP时自动加），劫持shift键
 
 权限足够的前提下，基于注册表的操作
 

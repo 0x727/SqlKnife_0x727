@@ -11,6 +11,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SqlCmdExec", "SqlCmdExec\Sq
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DownLoadExec", "DownLoadExec\DownLoadExec.sqlproj", "{B8504434-68B2-47CE-A86F-B2FD434F77FD}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EfsPotato", "EfsPotato\EfsPotato.sqlproj", "{4836D6A4-F807-4E6A-887D-409BF1480017}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,24 @@ Global
 		{B8504434-68B2-47CE-A86F-B2FD434F77FD}.Release|x86.ActiveCfg = Release|Any CPU
 		{B8504434-68B2-47CE-A86F-B2FD434F77FD}.Release|x86.Build.0 = Release|Any CPU
 		{B8504434-68B2-47CE-A86F-B2FD434F77FD}.Release|x86.Deploy.0 = Release|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Debug|x64.Build.0 = Debug|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Debug|x86.Build.0 = Debug|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Release|x64.ActiveCfg = Release|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Release|x64.Build.0 = Release|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Release|x64.Deploy.0 = Release|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Release|x86.ActiveCfg = Release|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Release|x86.Build.0 = Release|Any CPU
+		{4836D6A4-F807-4E6A-887D-409BF1480017}.Release|x86.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
