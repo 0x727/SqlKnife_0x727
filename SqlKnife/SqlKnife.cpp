@@ -16,7 +16,7 @@ void printusage(char * filename) {
 
 		)" << endl;
 	cout << "SqlKnife v1.0 " << endl << "A mssql exploit tool in commandline." << endl;
-	cout << filename << " <-H host> <-P port> <-u username> <-p password> <-D dbname> <-c cmd> <--openrdp> <--shift> <--disfw> <--oacreate> <--clrcmd> <--clrdexec> <--xpcmd> <--dbup> <--fix> <--remove> <--3/--4>" << endl;
+	cout << filename << " <-H host> <-P port> <-u username> <-p password> <-D dbname> <-c cmd> <--openrdp> <--shift> <--disfw> <--oacreate> <--clrcmd> <--clrdexec> <--xpcmd> <--dbup> <--dbup2> <--fix> <--remove> <--3/--4>" << endl;
 
 
 }
@@ -57,6 +57,7 @@ int main(int argc, char** argv) {
 		{"remove",no_argument,NULL,10},
 		{"3",no_argument,NULL,11},
 		{"4",no_argument,NULL,12},
+		{"dbup2",no_argument,NULL,13},
 		{0,0,0,0}
 
 	};
@@ -107,6 +108,9 @@ int main(int argc, char** argv) {
 			continue;
 		case 12:
 			isdonet4 = true;
+			continue;
+		case 13:
+			method = ExecMethod::DBUP2;
 			continue;
 		case 'H':
 			host = optarg;

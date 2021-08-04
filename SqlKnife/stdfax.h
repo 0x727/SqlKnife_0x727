@@ -13,6 +13,6 @@ enum ExecMethod
 	OACREATE,
 	CLRCMD,
 	CLRDEXEC,
-	DBUP
-	//EXEASM
+	DBUP,
+	DBUP2
 };

