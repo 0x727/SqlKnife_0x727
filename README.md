@@ -153,7 +153,7 @@ SqlKnife.exe -H 192.168.49.143 -P 1433 -u sa -p admin@123 --dbup -c whoami
 
 ## 0x07 新增功能
 
-无
+2021.8.5 新加入EfsPotato，本质是zcgonvh的EfsPotato，感谢zcgonvh
 
 ## 0x08 反馈
 
