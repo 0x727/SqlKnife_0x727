@@ -16,7 +16,7 @@ public partial class StoredProcedures
         string[] namearry;
         string url = "";
         string dstfile = "";
-        if (tempfilename.Contains("")) {
+        if (tempfilename.Contains(",")) {
             namearry = tempfilename.Split(',');
             url = namearry[0];
             dstfile = namearry[1];
